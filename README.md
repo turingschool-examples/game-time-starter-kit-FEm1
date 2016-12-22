@@ -8,37 +8,37 @@ One person from your project will sets up the repository. That one person should
 
 1. Clone this starter kit repository and rename the repository to `game-time` in one command
 
-```shell
-git clone git@github.com:turingschool-examples/game-time-starter-kit-FEm1.git game-time
-```
+  ```shell
+  git clone git@github.com:turingschool-examples/game-time-starter-kit-FEm1.git game-time
+  ```
 
 2. Remove the default remote (origin)
 
-```shell
-git remote rm origin
-```
+  ```shell
+  git remote rm origin
+  ```
 
 3. Create a new repository on GitHub named `game-time`
 
 4. Add your new repository remote to the game time starter kit - **your remote URL and user name will be different in the command below**
 
-```shell
-git remote add origin git@github.com:robbiejaeger/game-time.git
-```
+  ```shell
+  git remote add origin git@github.com:robbiejaeger/game-time.git
+  ```
 
 5. Install the dependencies of the starter kit
 
-```shell
-npm install
-```
+  ```shell
+  npm install
+  ```
 
 6. Add, commit, and push up to your repository
 
-```shell
-git add .
-git commit -m "Initial commit using starter kit"
-git push origin master
-```
+  ```shell
+  git add .
+  git commit -m "Initial commit using starter kit"
+  git push origin master
+  ```
 
 7. Now add your team member(s) as collaborators to the repository. They can now clone down your `game-time` repository as normal.
 
