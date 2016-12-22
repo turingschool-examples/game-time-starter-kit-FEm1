@@ -12,27 +12,29 @@ One person from your project will sets up the repository. That one person should
   git clone git@github.com:turingschool-examples/game-time-starter-kit-FEm1.git game-time
   ```
 
-2. Remove the default remote (origin)
+2. Change into the `game-time` directory
+
+3. Remove the default remote (origin)
 
   ```shell
   git remote rm origin
   ```
 
-3. Create a new repository on GitHub named `game-time`
+4. Create a new repository on GitHub named `game-time`
 
-4. Add your new repository remote to the game time starter kit - **your remote URL and user name will be different in the command below**
+5. Add your new repository remote to the game time starter kit - **your remote URL and user name will be different in the command below**
 
   ```shell
   git remote add origin git@github.com:robbiejaeger/game-time.git
   ```
 
-5. Install the dependencies of the starter kit
+6. Install the dependencies of the starter kit
 
   ```shell
   npm install
   ```
 
-6. Add, commit, and push up to your repository
+7. Add, commit, and push up to your repository
 
   ```shell
   git add .
@@ -40,9 +42,9 @@ One person from your project will sets up the repository. That one person should
   git push origin master
   ```
 
-7. Now add your team member(s) as collaborators to the repository. They can now clone down your `game-time` repository as normal.
+8. Now add your team member(s) as collaborators to the repository. They can now clone down your `game-time` repository as normal.
 
-8. Once each partner clones down the repo, they need to run `npm install` to install the dependencies on their machine.
+9. Once each partner clones down the repo, they need to run `npm install` to install the dependencies on their machine.
 
 ## Run the Server
 
