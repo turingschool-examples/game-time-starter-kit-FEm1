@@ -42,6 +42,8 @@ One person from your project will sets up the repository. That one person should
 
 7. Now add your team member(s) as collaborators to the repository. They can now clone down your `game-time` repository as normal.
 
+8. Once each partner clones down the repo, they need to run `npm install` to install the dependencies on their machine.
+
 ## Run the Server
 
 To fire up a development server:
