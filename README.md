@@ -1,6 +1,6 @@
 # Game Time Starter Kit (FE - Module 1)
 
-Basic Game Time starter kit with introductory documentation.
+Basic Game Time starter kit.
 
 ## Initial Setup
 
