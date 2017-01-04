@@ -146,7 +146,7 @@ Near the end of game time, you will have multiple objects for your game that are
 
 Test file organization is a bit different from development files. If we want to test the `block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/block-test.js`. Here is what that file would look like:
 
-**block-test.js**
+**test/block-test.js**
 
 ```javascript
 var chai = require('chai');
