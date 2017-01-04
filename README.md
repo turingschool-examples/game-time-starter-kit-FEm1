@@ -83,7 +83,7 @@ Node and webpack work together to help us organize our files and keep responsibi
 
 For example, if we have the `lib/index.js` file and a `block.js` file:
 
-** lib/index.js **
+**lib/index.js**
 
 ```javascript
 var Block = require('./block');
@@ -108,7 +108,7 @@ requestAnimationFrame(function gameLoop() {
 });
 ```
 
-** lib/block.js **
+**lib/block.js**
 
 ```javascript
 function Block(x, y, width, height, context) {
@@ -146,7 +146,7 @@ Near the end of game time, you will have multiple objects for your game that are
 
 Test file organization is a bit different from development files. If we want to test the `block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/block-test.js`. Here is what that file would look like:
 
-** block-test.js **
+**block-test.js**
 
 ```javascript
 var chai = require('chai');
@@ -161,7 +161,7 @@ describe('Block', function() {
 });
 ```
 
-** test/index.js **
+**test/index.js**
 
 ```javascript
 require('./block-test')
@@ -171,4 +171,4 @@ Two main points to pay attention to:
 
 1. In the `block-test.js` file, we require the `block.js` file so that we can construct blocks in our tests.
 
-2. In the `test/index.js` file, we require the `block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`). 
+2. In the `test/index.js` file, we require the `block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`).
