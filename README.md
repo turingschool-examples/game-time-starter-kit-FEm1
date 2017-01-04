@@ -138,10 +138,37 @@ There are two main things to pay attention to here:
 
 2. In the `block.js` file, the bottom line says `module.exports = Block;` which says what we want this file to export when we say `require` in other files, like in `index.js`.
 
-So now we have two files that can share code between each other, but we have to pay attention to what we export and what we require.
+So now we have two files that can share code between each other, but we have to pay attention to what we export and what we require. If we didn't do this, then when we try to make a new Block in the `index.js` file, it won't know what Block we're talking about!
 
 ### Test Files
 
 Near the end of game time, you will have multiple objects for your game that are tested separately with individual test files. The `test/index.js` file serves as an "entry point" for mocha to load all of the tests you write.
 
-More on this coming soon...
+Test file organization is a bit different from development files. If we want to test the `block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/block-test.js`. Here is what that file would look like:
+
+** block-test.js **
+
+```javascript
+var chai = require('chai');
+var assert = chai.assert;
+
+var Block = require('../lib/block');
+
+describe('Block', function() {
+  context('with default attributes', function() {
+    // Your tests here...  
+  });  
+});
+```
+
+** test/index.js **
+
+```javascript
+require('./block-test')
+```
+
+Two main points to pay attention to:
+
+1. In the `block-test.js` file, we require the `block.js` file so that we can construct blocks in our tests.
+
+2. In the `test/index.js` file, we require the `block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`). 
