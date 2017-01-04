@@ -81,7 +81,7 @@ Webpack is a little opinionated about how files are organized. Here is a brief g
 
 Node and webpack work together to help us organize our files and keep responsibilities separated.
 
-For example, if we have the `lib/index.js` file and a `block.js` file:
+For example, if we have the `lib/index.js` file and a `lib/block.js` file:
 
 **lib/index.js**
 
