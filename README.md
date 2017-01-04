@@ -75,16 +75,73 @@ npm test
 
 ## File Organization
 
-Webpack is somewhat opinionated about how files are organized. Here is a brief guide on how to organize development and test files.
+Webpack is a little opinionated about how files are organized. Here is a brief guide on how to organize development and test files.
 
 ### Development Files
 
 Node and webpack work together to help us organize our files and keep responsibilities separated.
 
-More on this coming soon...
+For example, if we have the `lib/index.js` file and a `block.js` file:
+
+** lib/index.js **
+
+```javascript
+var Block = require('./block');
+
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+var blocks = [];
+
+blocks.push(new Block(50, 50, 10, 10, context));
+blocks.push(new Block(100, 50, 10, 10, context));
+
+requestAnimationFrame(function gameLoop() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  this.blocks.forEach(function(block){
+    block.draw()
+    block.move()
+  })
+
+  requestAnimationFrame(gameLoop);
+});
+```
+
+** lib/block.js **
+
+```javascript
+function Block(x, y, width, height, context) {
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+  this.context = context;
+}
+
+Block.prototype.draw = function () {
+  this.context.fillRect(this.x, this.y, this.width, this.height);
+};
+
+Block.prototype.move = function () {
+  this.y++;
+};
+
+module.exports = Block;
+```
+
+All of the `block.js` code could live in the `index.js` file, but that would go against our philosophy of separating responsibility between files.
+
+There are two main things to pay attention to here:
+
+1. At the top of the `index.js` file, we require the `block.js` file using the line of code `var Block = require('./block');` (we leave out the `.js`). This brings in the code from the `block.js` file so we can use that file's code in the `index.js` file.
+
+2. In the `block.js` file, the bottom line says `module.exports = Block;` which says what we want this file to export when we say `require` in other files, like in `index.js`.
+
+So now we have two files that can share code between each other, but we have to pay attention to what we export and what we require.
 
 ### Test Files
 
-Near the end of game time, you will have multiple objects for your game that are tested separately with individual test files. The `/test/index.js` file serves as an "entry point" for mocha to load all of the tests you write.
+Near the end of game time, you will have multiple objects for your game that are tested separately with individual test files. The `test/index.js` file serves as an "entry point" for mocha to load all of the tests you write.
 
 More on this coming soon...
