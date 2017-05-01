@@ -1,4 +1,4 @@
-# Game Time Starter Kit (FE - Module 1)
+# Game Time Starter Kit (FE - Module 2)
 
 Basic Game Time starter kit.
 
@@ -81,12 +81,12 @@ Webpack is a little opinionated about how files are organized. Here is a brief g
 
 Node and webpack work together to help us organize our files and keep responsibilities separated.
 
-For example, if we have the `lib/index.js` file and a `lib/block.js` file:
+For example, if we have the `lib/index.js` file and a `lib/Block.js` file:
 
 **lib/index.js**
 
 ```javascript
-var Block = require('./block');
+var Block = require('./Block');
 
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
@@ -108,7 +108,7 @@ requestAnimationFrame(function gameLoop() {
 });
 ```
 
-**lib/block.js**
+**lib/Block.js**
 
 ```javascript
 function Block(x, y, width, height, context) {
@@ -130,13 +130,13 @@ Block.prototype.move = function () {
 module.exports = Block;
 ```
 
-All of the `block.js` code could live in the `index.js` file, but that would go against our philosophy of separating responsibility between files.
+All of the `Block.js` code could live in the `index.js` file, but that would go against our philosophy of separating responsibility between files.
 
 There are two main things to pay attention to here:
 
-1. At the top of the `index.js` file, we require the `block.js` file using the line of code `var Block = require('./block');` (we leave out the `.js`). This brings in the code from the `block.js` file so we can use that file's code in the `index.js` file.
+1. At the top of the `index.js` file, we require the `Block.js` file using the line of code `var Block = require('./Block');` (we leave out the `.js`). This brings in the code from the `Block.js` file so we can use that file's code in the `index.js` file.
 
-2. In the `block.js` file, the bottom line says `module.exports = Block;` which says what we want this file to export when we say `require` in other files, like in `index.js`.
+2. In the `Block.js` file, the bottom line says `module.exports = Block;` which says what we want this file to export when we say `require` in other files, like in `index.js`.
 
 So now we have two files that can share code between each other, but we have to pay attention to what we export and what we require. If we didn't do this, then when we try to make a new Block in the `index.js` file, it won't know what Block we're talking about!
 
@@ -144,15 +144,15 @@ So now we have two files that can share code between each other, but we have to 
 
 Near the end of game time, you will have multiple objects for your game that are tested separately with individual test files. The `test/index.js` file serves as an "entry point" for mocha to load all of the tests you write.
 
-Test file organization is a bit different from development files. If we want to test the `block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/block-test.js`. Here is what that file would look like:
+Test file organization is a bit different from development files. If we want to test the `Block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/Block-test.js`. Here is what that file would look like:
 
-**test/block-test.js**
+**test/Block-test.js**
 
 ```javascript
 var chai = require('chai');
 var assert = chai.assert;
 
-var Block = require('../lib/block');
+var Block = require('../lib/Block');
 
 describe('Block', function() {
   context('with default attributes', function() {
@@ -164,11 +164,11 @@ describe('Block', function() {
 **test/index.js**
 
 ```javascript
-require('./block-test')
+require('./Block-test')
 ```
 
 Two main points to pay attention to:
 
-1. In the `block-test.js` file, we require the `block.js` file so that we can construct blocks in our tests.
+1. In the `Block-test.js` file, we require the `Block.js` file so that we can construct blocks in our tests.
 
-2. In the `test/index.js` file, we require the `block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`).
+2. In the `test/index.js` file, we require the `Block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`).
