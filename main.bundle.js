@@ -54,9 +54,8 @@
 	var Player = __webpack_require__(2);
 	const canvas = document.getElementById('canvas-element');
 	const context = canvas.getContext('2d');
-	var gameSize = { x: canvas.width, y: canvas.height };
-	var player1 = new Player(50, 50, 10, 10, 'blue', true, false);
-	var player2 = new Player(300, 300, 10, 10, 'red', false, true);
+	var player1 = new Player(1, canvas.height / 2 - 5, 10, 10, 'blue', true, false);
+	var player2 = new Player(canvas.width - 11, canvas.height / 2 - 5, 10, 10, 'red', false, true);
 	var playerArray = [player1, player2];
 
 	var p1direction = {
@@ -71,7 +70,7 @@
 
 	function gameLoop() {
 
-	  for (var i = 0; i < playerArray.length; i++) {
+	  for (let i = 0; i < playerArray.length; i++) {
 	    playerArray[i].draw(context);
 	    player1.moveRight(p1direction);
 	    player1.moveLeft(p1direction);
@@ -170,9 +169,10 @@
 	  }
 	});
 
-	function borderCheck(i) {
+	function borderCheck() {
 	  //look for collision on border
-	  if (playerArray[i].x === canvas.width - 10 || playerArray[i].x === 0 || playerArray[i].y === canvas.height - 10 || playerArray[i].y === 0) {
+	  if (player1.x === canvas.width - 10 || player1.x === 0 || player1.y === canvas.height - 10 || player1.y === 0 || player2.x === canvas.width - 10 || player2.x === 0 || player2.y === canvas.height - 10 || player2.y === 0) {
+
 	    roundEnd();
 	  }
 	}
@@ -184,6 +184,7 @@
 	function roundEnd() {
 	  //stop movement of both players
 	  //set direction.x and direction.y to 0
+
 	  p1direction = {
 	    x: 0,
 	    y: 0
