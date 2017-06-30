@@ -2,6 +2,11 @@ canvas {
   border: 2px solid black;
   display: block;
   margin: 0 auto;
+  background-color: black;
+  /*background-image: url('https://www.xmple.com/wallpaper/graph-paper-black-green-grid-3200x1800-c2-000000-00ff00-l2-4-120-a-0-f-20.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;*/
 }
 
 canvas:focus {
