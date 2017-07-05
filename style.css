@@ -35,7 +35,7 @@ aside {
   height: 520px;
   display: block;
   background-color: black;
-  border: 2px double cyan;
+  border: 2px solid cyan;
   margin-left: 5px;
 }
 
