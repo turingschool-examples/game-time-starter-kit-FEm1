@@ -3,10 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>Game Time</title>
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="countdown-display">countdown</div>
   <canvas id="canvas-element" height="510" width="500" tabindex="1"></canvas>
+  <section class="game-content">
+    <canvas id="canvas-element" height="510" width="500" tabindex="1"></canvas>
+    <aside class="sidebar">
+      <div class="aside-corner top-left"></div>
+      <div class="aside-corner top-right"></div>
+      <div class="aside-corner bottom-left"></div>
+      <div class="aside-corner bottom-right"></div>
+      <div class="title-box">
+        <h1>TRON</h1>
+      </div>
+      <div class="lives-box">
+        <h2 class="lives">LIVES</h2>
+        <h3 class="player1">Player 1</h3>
+        <h3 class="player2">Player 2</h3>
+      </div>
+      <!-- <div class="controls-box">
+        <h4 class="contorls-title">Conrols</h4>
+          <h5 class="p1-controls">Player 1</h5>
+          <p class="controls p1-up">Up: W</p>
+          <p class="controls p1-down">Down: S</p>
+          <p class="controls p1-Left">Left: A</p>
+          <p class="controls p1-Right">Right: D</p>
+          <h5 class="p2-controls">Player  2</h5>
+          <p class="controls p2-up">Up: Up Arrow</p>
+          <p class="controls p2-down">Down: Down Arrow</p>
+          <p class="controls p2-Left">Left: Left Arrow</p>
+          <p class="controls p2-Right">Right: Right Arrow</p>
+        </div> -->
+    </aside>
+  </section>
   <script src="main.bundle.js"></script>
 </body>
 </html>
