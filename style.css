@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  font-family: Tr2n;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url(assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  margin-top: 25px;
+  padding: 25px;
+  border: 2px solid cyan;
+  background-color: black;
+  display: flex;
+}
+
+canvas {
+  border: 2px solid cyan;
+  display: block;
+  background-color: black;
+}
+
+canvas:focus {
+  outline: none;
+}
+
+#canvas-element {
+  position: relative;
+}
+
+#canvas-overlay {
+  position: absolute;
+  z-index: 9999;
+  opacity: 1;
+}
+
+aside {
+  width: 250px;
+  height: 520px;
+  display: block;
+  background-color: black;
+  border: 2px solid cyan;
+  margin-left: 5px;
+}
+
+.title-box {
+  display: block;
+  text-align: center;
+  margin: 5px 10px;
+  color: Cyan;
+  height: 100px;
+}
+
+.lives-box {
+  display: block;
+  margin: 20px 10px;
+  color: Cyan;
+  height: 150px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+}
+
+/*.aside-corner {
+  width: 10;
+  height: 10;
+  background-color: red
+  border-left: 10px solid cyan;
+  border-right: 10px solid purple;
+  border-bottom: 10px solid red;
+}
+
+.top-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.top-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.bottom-left {}
+.bottom-right {}*/
+
+/*.controls-box {
+  display: block;
+  margin: 0 10px;
+  color: Cyan;
+  height: 100px;
+}
+
+.controls-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  display: inline;
+  font-family: sans-serif;
+  font-size: 16
+}*/
