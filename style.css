@@ -30,6 +30,16 @@ canvas:focus {
   outline: none;
 }
 
+#canvas-element {
+  position: relative;
+}
+
+#canvas-overlay {
+  position: absolute;
+  z-index: 9999;
+  opacity: 1;
+}
+
 aside {
   width: 250px;
   height: 520px;
