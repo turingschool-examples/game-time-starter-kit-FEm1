@@ -6,7 +6,7 @@ describe('Obstacle', function() {
   var myObstacle;
 
   beforeEach(function() {
-    myObstacle = new Obstacle(0, 0, 67, 1, 67, 67)
+    myObstacle = new Obstacle(670, 500, 67, -10, 67, 67)
   })
 
   it('should create an object', function() {
@@ -14,7 +14,11 @@ describe('Obstacle', function() {
   })
 
   it('should move', function() {
-    assert.equal(myObstacle.xCoordinate)
+    assert.equal(myObstacle.xCoordinate, 670);
+    assert.equal(myObstacle.yCoordinate, 500);
+    let targetx = myObstacle.xCoordinate + myObstacle.velocity;
     myObstacle.moveObstacle();
+    assert.equal(myObstacle.xCoordinate, targetx);
+    assert.equal(myObstacle.yCoordinate, 500);
   })
 })
