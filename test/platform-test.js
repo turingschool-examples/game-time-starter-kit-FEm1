@@ -5,13 +5,10 @@ const {Platform, Turtle, Crocodile} = require('../lib/platform.js');
 describe('Platform test', () => {
 
   let platform;
-  let turtle;
   let squareWidth = 50;
-  let squareHeight = 67;
 
   beforeEach(() => {
     platform = new Platform(227, squareWidth * 3, 3, squareWidth * 2, 4, squareWidth * 2);
-    turtle = new Turtle(277, squareWidth * 3, -2, squareWidth * 3, 6, squareWidth * 0);
   })
 
   it('should be a function', () => {
@@ -62,14 +59,63 @@ describe('Turtle test', () => {
 
   let turtle;
   let squareWidth = 50;
-  let squareHeight = 67;
 
   beforeEach(() => {
-    turtle = new Turtle(277, squareWidth * 3, -2, squareWidth * 3, 6, squareWidth * 0);
+    turtle = new Turtle(277, squareWidth * 3, squareWidth * 3, -2, 6, squareWidth * 0);
   })
 
   it('should be a function', () => {
     assert.isFunction(Turtle);
+  })
+
+  it('should be an instance of a Turtle', () => {
+    expect(turtle).to.be.an.instanceOf(Turtle)
+  })
+
+  it('should have an x coordinate', () => {
+    expect(turtle.xCoordinate).to.equal(277);
+  })
+
+  it('should have a y coordinate', () => {
+    expect(turtle.yCoordinate).to.equal(150);
+  })
+
+  it('should have a height', () => {
+    expect(turtle.height).to.equal(46);
+  })
+
+  it('should have a width', () => {
+    expect(turtle.width).to.equal(150);
+  })
+
+  it('should have a velocity', () => {
+    expect(turtle.velocity).to.equal(-2);
+  })
+
+  it('should have a gap', () => {
+    expect(turtle.gap).to.equal(6);
+  })
+
+  it('should have an offset', () => {
+    expect(turtle.offset).to.equal(0);
+  })
+
+  it.skip('should be able to disappear', () => {
+    expect(turtle.disappears).to.equal(false);
+  })
+
+  it('should be able to submerge', () => {
+    expect(turtle.submerged).to.equal(false);
+  })
+
+  it('should have a timer', () => {
+    expect(turtle.timer).to.equal(0);
+  })
+
+  it('should move', () => {
+    expect(turtle.xCoordinate).to.equal(277);
+    turtle.move();
+    expect(turtle.xCoordinate).to.equal(275);
   })
 
 })
