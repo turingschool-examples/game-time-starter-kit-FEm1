@@ -20,6 +20,13 @@ describe('Score', function() {
     assert.notEqual(myScore.high, 'null')
   })
 
+  it('Should not overflow 5 digits', function() {
+    myScore.addScore(99999);
+    assert.equal(myScore.current, 99999);
+    myScore.addScore(10);
+    assert.equal(myScore.current, 10)
+  })
+
   it('Should start with toad row max = 0', function() {
     assert.equal(myScore.toadMaxRow, 0);
   })
