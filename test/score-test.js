@@ -3,12 +3,13 @@ var Score = require('../lib/score.js');
 
 describe('Score', function() {
   var myScore;
+  
   beforeEach(function() {
     myScore = new Score();
     // var
   })
 
-  it('Should be an object', function(){
+  it('Should be an object', function() {
     assert.equal(typeof(myScore), 'object');
   })
 

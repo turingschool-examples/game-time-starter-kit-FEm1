@@ -1,10 +1,13 @@
 var assert = require('chai').assert;
 var Level = require('../lib/level.js');
+var Home = require('../lib/home.js');
 
 describe('Level', function() {
   var myLevel;
 
   beforeEach(function() {
+    // myHomes = [new Home(10, 10, 67, 50), new Home(110, 10, 67, 50)]
+    // myLevel = new Level(myHomes);
     myLevel = new Level();
   })
 
@@ -46,5 +49,17 @@ describe('Level', function() {
       myLevel.drawTimer();
     }
     assert.equal(myLevel.timeRemaining, 59.75);
+  })
+
+  it('Should increase the level', function() {
+    assert.equal(myLevel.currentLevel, 1);
+    myLevel.next();
+    assert.equal(myLevel.currentLevel, 2);
+  })
+
+  it('Should add 1 life', function() {
+    assert.equal(myLevel.lives, 5);
+    myLevel.addLife();
+    assert.equal(myLevel.lives, 6);
   })
 })
