@@ -16,6 +16,10 @@ button {
   color: #21DE00;
 }
 
+div {
+  display: none;
+}
+
 footer {
   display: flex;
   justify-content: space-around;
