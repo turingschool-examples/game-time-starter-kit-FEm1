@@ -13,12 +13,5 @@ describe('Timer', function() {
     assert.equal(myTimer.timeRemaining, 60);
   })
 
-  it('Should decrease timer by .1 seconds every 2 frames', function() {
-    assert.equal(myTimer.timeRemaining, 60);
-    for (let i = 0; i < 2; i++) {
-      myTimer.drawTimer();
-    }
-    assert.equal(myTimer.timeRemaining, 59.9);
-  })
 
 })
