@@ -9,6 +9,7 @@ describe('Platform test', () => {
 
   beforeEach(() => {
     platform = new Platform(227, squareWidth * 3, 3, squareWidth * 2, 4, squareWidth * 2);
+
   })
 
   it('should be a function', () => {
@@ -98,14 +99,6 @@ describe('Turtle test', () => {
 
   it('should have an offset', () => {
     expect(turtle.offset).to.equal(0);
-  })
-
-  it.skip('should be able to disappear', () => {
-    expect(turtle.disappears).to.equal(false);
-  })
-
-  it('should be able to submerge', () => {
-    expect(turtle.submerged).to.equal(false);
   })
 
   it('should have a timer', () => {
