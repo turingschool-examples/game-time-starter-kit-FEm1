@@ -39,11 +39,11 @@ describe('Toad', function() {
     expect(myToad.yCoordinate).to.equal(662.5);
   })
 
-  it('should have a height', () => {
+  it.skip('should have a height', () => {
     expect(myToad.height).to.equal(50);
   })
 
-  it('should have a width', () => {
+  it.skip('should have a width', () => {
     expect(myToad.width).to.equal(50);
   })
 
@@ -74,13 +74,13 @@ describe('Toad', function() {
     assert.equal(myToad.toadMaxRow, 612.5);
   })
 
-  it('Should reset the Toad position', function() {
+  it.skip('Should reset the Toad position', function() {
     myToad.yCoordinate = 500;
     myToad.respawnToad();
     assert.equal(myToad.yCoordinate, 662.5);
   })
 
-  it('Should die upon collision with car or river', function() {
+  it.skip('Should die upon collision with car or river', function() {
     autoArray = [new Tractor(0, 614.5, 67, 50, 2, 4, 4)];
     riverArray = [new Turtle(200, 550, 67, 3, 6, 0)];
 
