@@ -8,7 +8,6 @@
     "build": "./node_modules/webpack/bin/webpack.js",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
-
   },
   "repository": {
     "type": "git",
