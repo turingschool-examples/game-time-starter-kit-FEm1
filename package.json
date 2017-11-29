@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "build": "./node_modules/webpack/bin/webpack.js",
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "babel-loader": "^6.2.7",
     "chai": "^3.5.0",
     "css-loader": "^0.26.0",
+    "eslint": "^4.12.0",
     "mocha": "^3.1.2",
     "mocha-loader": "^1.0.0",
     "node-libs-browser": "^1.0.0",
