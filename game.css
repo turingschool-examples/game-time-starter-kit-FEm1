@@ -1,0 +1,6 @@
+#game {
+  border: none;
+  background: url('images/background.svg');
+  margin: auto;
+  display: block;
+}
