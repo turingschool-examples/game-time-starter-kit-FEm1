@@ -4,19 +4,20 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: {
     main: "./lib/index.js",
-    test: "mocha!./test/index.js"
+    test: "mocha-loader!./test/index.js"
   },
+  mode: 'development',
   output: {
     path: __dirname,
     filename: "[name].bundle.js"
   },
   module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+    rules: [
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.css']
+    extensions: ['.js', '.json', '.css']
   }
 };
