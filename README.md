@@ -12,6 +12,8 @@ One person from your project will sets up the repository. That one person should
   git clone git@github.com:turingschool-examples/game-time-starter-kit-FEm1.git game-time
   ```
 
+  safsa
+
 2. Change into the `game-time` directory
 
 3. Remove the default remote (origin)
