@@ -1,5 +1,9 @@
 #game {
   border: 1px dashed;
-  margin: auto;
+  margin: 0;
   display: block;
+}
+
+body {
+  margin: 0;
 }
