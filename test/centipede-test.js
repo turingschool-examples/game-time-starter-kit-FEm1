@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const Centipede = require('../lib/centipede.js');
 
-describe('Centipede',() => {
+describe('Centipede', () => {
   let centipede;
 
   beforeEach(() => centipede = new Centipede);
