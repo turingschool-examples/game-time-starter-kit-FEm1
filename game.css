@@ -1,4 +1,14 @@
-#game {
+body {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  min-width:1300px;
+}
+
+div {
+  padding: 20px;
+}
+
+#canvas {
   border: 1px dashed;
   margin: auto;
   display: block;
