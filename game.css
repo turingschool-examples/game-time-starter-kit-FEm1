@@ -1,6 +1,7 @@
 body {
   display: grid;
   grid-template-columns: 30% 40% 30%;
+  min-width:1300px;
 }
 
 div {
