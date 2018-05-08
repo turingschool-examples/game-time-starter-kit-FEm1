@@ -13,7 +13,7 @@ describe('Segment', () => {
   it('should have an x velocity', () => {
     expect(segment.dx).to.equal(5); 
    })
-  it.only('should have a y velocity', () => {
+  it('should have a y velocity', () => {
     expect(segment.dy).to.equal(1); 
    })
 })
