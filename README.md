@@ -84,6 +84,23 @@ Ideas:
 Tools: 
 
 Additional Notes:
+Questions for evaluator:
+
+- [ ] What might be a better way to approach this program/game?
+- [ ] How do we separate our functions  from context?
+- [ ] What is the best approach for mocking tests when you need to?
+
+
+Things we would do given the time:
+
+- [ ] Uncouple context so we can test collisions 
+- [ ] Keep track of scrore
+- [ ] Track lives
+- [ ] Add levels 
+- [ ] Add style to canvas
+- [ ] Add a spider
+- [ ] More robust testing
+- [ ] Add c.fillStyle() color property to our constructor
 
 
 
