@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-import Exterminator from '../lib/exterminator.js';
+import Exterminator from '../lib/Exterminator.js';
 
 describe('Exterminator', () => {
   let exterminator;
