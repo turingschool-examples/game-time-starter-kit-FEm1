@@ -1,5 +1,6 @@
 const { expect } = require('chai');
-const Centipede = require('../lib/centipede.js');
+
+import Centipede from '../lib/centipede.js';
 
 describe('Centipede', () => {
   let centipede;
@@ -7,11 +8,23 @@ describe('Centipede', () => {
   beforeEach(() => centipede = new Centipede);
 
   it('should exist', () => expect(centipede).to.exist);
+
   it('should have a height and width', () => {
-    expect(centipede.height).to.equal(25);
-    expect(centipede.width).to.equal(25);
+    expect(centipede.radius).to.equal(30);
   });
-  it('should move', () => expect(centipede.move()).to.equal(true));  
-});
+
+  it('should have a x velocity', () => {
+    expect(centipede.dx).to.equal(5);
+  });
+
+  it('should have an empty array', () => {
+    expect(centipede.centipedeArray).to.deep.equal([]);
+  });
+
+  it('should have a segment detection array of 0', () => {
+    expect(centipede.segmentDetectionArray).to.equal(0);
+  })
+
+})
 
   
