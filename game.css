@@ -1,5 +1,17 @@
 #game {
   border: 1px dashed;
-  margin: auto;
+  margin: 0 auto;
   display: block;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: magenta;
+}
+
+p {
+  color: magenta;
 }
